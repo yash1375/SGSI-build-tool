@@ -168,12 +168,6 @@ function normal() {
     cat ./make/add_build/product_prop >> $systemdir/product/etc/build.prop
     cat ./make/add_build/system_ext_prop >> $systemdir/system_ext/etc/build.prop
 
-    # Disable bpfloader
-    rm -rf $systemdir/etc/init/bpfloader.rc
-    echo ""  >> $systemdir/product/etc/build.prop
-    echo "# Disable bpfloader" >> $systemdir/product/etc/build.prop
-    echo "bpf.progs_loaded=1" >> $systemdir/product/etc/build.prop
-
     # Enable HW Mainkeys
     mainkeys() {
       grep -q 'qemu.hw.mainkeys=' $systemdir/build.prop

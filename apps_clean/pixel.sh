@@ -57,3 +57,4 @@ rm -rf $1/product/app/Videos
 # hbmSV
 rm -rf $1/system_ext/priv-app/HbmSVManager
 rm -rf $1/system_ext/priv-app/MyVerizonServices
+rm -rf $1/system_ext/priv-app/ims

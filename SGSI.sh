@@ -397,8 +397,8 @@ if [ -L $systemdir/vendor ];then
       if (echo $other_args | grep -qo -- "--fix-bug") ;then
         fix_bug
       fi
-      echo "$SIGNING_WITH_AOSPKEY"
-      python $bin/tools/signapk/resign.py "$systemdir" "$bin/tools/signapk/AOSP_security" "$bin/$HOST/$platform/lib64"> $TARGETDIR/resign.log
+    #  echo "$SIGNING_WITH_AOSPKEY"
+     # python $bin/tools/signapk/resign.py "$systemdir" "$bin/tools/signapk/AOSP_security" "$bin/$HOST/$platform/lib64"> $TARGETDIR/resign.log
       ./makeimg.sh "--ab${use_config}"
       exit 0
       ;;
